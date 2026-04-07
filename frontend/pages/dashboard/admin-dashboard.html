@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Course File Management System | Admin Dashboard</title>
+    <link rel="stylesheet" href="../../assets/css/admin-dashboard.css">
+    <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Faculty Course File Management System</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Manage Faculty</a></li>
+                    <li><a href="#"><i class="fas fa-book"></i> Manage Courses</a></li>
+                    <li><a href="#" id="logoutButton"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1>Administrator Control Panel</h1>
+            </header>
+
+            <section class="stats">
+                <div class="card">
+                    <h3>Total Faculty</h3>
+                    <p id="faculty-count">0</p>
+                </div>
+                <div class="card">
+                    <h3>Active Courses</h3>
+                    <p id="course-count">0</p>
+                </div>
+                <div class="card">
+                    <h3>Allocated Files</h3>
+                    <p id="file-count">0</p>
+                </div>
+            </section>
+
+            <section class="allocation-form">
+                <h3>Assign Course to Faculty</h3>
+                <form id="courseAllocationForm">
+                    <div class="form-group">
+                        <label>Select Faculty</label>
+                        <select id="facultySelect" required>
+                            <option value="">-- Choose Faculty --</option>
+                            <option value="fahad-malik">Fahad Malik</option>
+                            <option value="kainat">Kainat Sajid</option>
+                            <option value="fizza">Fizza</option>
+                            <option value="zeeshan">Zeeshan</option>
+                            <option value="hadia">Hadia</option>
+                            <option value="zohair">Zohair</option>
+                            <option value="maryam">Maryam</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Select Course</label>
+                        <select id="courseSelect" required>
+                            <option value="">-- Choose Course --</option>
+                            <option value="cs101">Introduction to Computing</option>
+                            <option value="cs202">Data Structures</option>
+                            <option value="cs303">Software Engineering</option>
+                            <option value="cs304">Web Development</option>
+                            <option value="cs305">Cybersecurity</option>
+                            <option value="cs306">Artificial Intelligence</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">Allocate Course</button>
+                </form>
+            </section>
+
+            <section class="data-table">
+                <h3>Current Course Allocations</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Faculty Name</th>
+                            <th>Course Name</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="allocationList">
+                        </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script type="module" src="../../assets/js/admin-dashboard.js"></script>
+</body>
+</html>
