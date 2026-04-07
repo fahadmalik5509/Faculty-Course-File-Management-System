@@ -40,6 +40,17 @@ h1, h2 {
     margin-top: 8px;
 }
 
+.made-by {
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    color: #6a7380;
+    font-size: 13px;
+}
+
 .btn {
     display: block;
     width: 100%;
